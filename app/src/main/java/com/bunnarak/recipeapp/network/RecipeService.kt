@@ -1,6 +1,6 @@
 package com.bunnarak.recipeapp.network
 
-import com.bunnarak.recipeapp.network.model.RecipeNetworkEntity
+import com.bunnarak.recipeapp.network.model.RecipeDTO
 import com.bunnarak.recipeapp.network.responses.RecipeSearchResponse
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -18,5 +18,5 @@ interface RecipeService {
     suspend fun get(
         @Header("Authorization") token: String,
         @Query("id") id: Int
-    ): RecipeNetworkEntity
+    ): RecipeDTO
 }

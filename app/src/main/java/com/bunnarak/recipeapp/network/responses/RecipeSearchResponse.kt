@@ -1,12 +1,12 @@
 package com.bunnarak.recipeapp.network.responses
 
-import com.bunnarak.recipeapp.network.model.RecipeNetworkEntity
+import com.bunnarak.recipeapp.network.model.RecipeDTO
 import com.google.gson.annotations.SerializedName
 
-class RecipeSearchResponse (
+data class RecipeSearchResponse (
     @SerializedName("count")
     var count: Int,
 
-    @SerializedName("result")
-    var result: List<RecipeNetworkEntity>
+    @SerializedName("recipes")
+    var recipes: List<RecipeDTO>
 )
